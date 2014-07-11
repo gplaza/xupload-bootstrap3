@@ -9,7 +9,7 @@
             <td class="error" colspan="2"><span class="label label-important">{%=locale.fileupload.error%}</span> {%=locale.fileupload.errors[file.error] || file.error%}</td>
         {% } else { %}
             <td class="preview">{% if (file.thumbnail_url) { %}
-                <a href="{%=file.url%}" title="{%=file.name%}" rel="gallery" download="{%=file.name%}"><img src="{%=file.thumbnail_url%}"></a>
+                <a href="{%=file.url%}" title="{%=file.name%}" rel="gallery" download="{%=file.name%}"><i class="glyphicon glyphicon-file"></i></a>
             {% } %}</td>
             <td class="name">
                 <a href="{%=file.url%}" title="{%=file.name%}" rel="{%=file.thumbnail_url&&'gallery'%}" download="{%=file.name%}">{%=file.name%}</a>
@@ -19,7 +19,7 @@
         {% } %}
         <td class="delete">
             <button class="btn btn-danger" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}">
-                <i class="icon-trash icon-white"></i>
+                <i class="glyphicon glyphicon-trash glyphicon-white"></i>
                 <span>{%=locale.fileupload.destroy%}</span>
             </button>
             <?php if ($this->multiple) : ?><input type="checkbox" name="delete" value="1">
